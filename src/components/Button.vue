@@ -15,7 +15,7 @@
     transition: background-color 250ms ease-in-out;
     &:hover {
       color: colors.$c-gold;
-      background-color: colors.$c-white;
+      background-color: transparent;
       border: 2px solid colors.$c-gold;
     }
   }

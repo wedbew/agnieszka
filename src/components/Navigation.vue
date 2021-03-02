@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar">
     <div class="navbar-header">
-        <a href="/" class="navbar-link">A<span>T</span>.</a>
+        <!-- <a href="/" class="navbar-link">A<span>T</span>.</a> -->
     </div>
     <ul class="navbar-menu">
       <li v-for="(item, index) in menuItems"
@@ -49,14 +49,25 @@ export default {
       ],
     };
   },
-  mounted() {
-    // const activeTab = this.menuItems.filter((item) => item.en === this.$store.state.currentTab);
-    // for (let i = 0; i < this.menuItems.length; i += 1) {
-    //   this.menuItems[i].active = false;
-    // }
-    // activeTab[0].active = true;
-    console.log(this.activeTab);
-    console.log(this.$store.state.currentTab);
+  computed: {
+    currentTab() {
+      return this.$store.state.currentTab;
+    },
+  },
+  watch: {
+    currentTab(newVal) {
+      this.activeTab = newVal;
+      this.setActiveTab();
+    },
+  },
+  methods: {
+    setActiveTab() {
+      const activeTab = this.menuItems.filter((item) => item.en === this.activeTab);
+      for (let i = 0; i < this.menuItems.length; i += 1) {
+        this.menuItems[i].active = false;
+      }
+      activeTab[0].active = true;
+    },
   },
 };
 </script>
@@ -64,7 +75,7 @@ export default {
   @use '../style/colors';
 
   .navbar {
-    background-color: colors.$c-white;
+    background-color: colors.$c-black;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -81,19 +92,22 @@ export default {
         font-weight: 700;
         color: colors.$c-gold;
         span {
-          color: colors.$c-black;
+          color: colors.$c-white;
           font-weight: 900;
         }
       }
     }
     &-menu {
       display: flex;
+      height: 100%;
+      align-items: center;
+      padding-bottom: 10px;
       &-item {
 
       }
     }
     &-link {
-      color: colors.$c-black;
+      color: colors.$c-white;
       font-size: 1rem;
       text-decoration: none;
       transition: color 250ms ease-in-out;

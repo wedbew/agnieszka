@@ -1,7 +1,8 @@
 <template>
   <div
-    class="contact"
-    data-aos="fade-in" data-aos-delay="1000"
+    class="contact p-xl-tb"
+    data-aos="fade-up"
+    daata-aos-delay="500"
     v-observe-visibility="{
       callback: visibilityChanged,
       threshold: 1,
@@ -40,7 +41,7 @@ export default {
 <style lang="scss" scoped>
   .contact {
     width: 100%;
-    height: 100vh;
+    min-height: 60vh;
     display: flex;
     align-items: center;
     justify-content: flex-start;

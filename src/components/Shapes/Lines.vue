@@ -1,0 +1,146 @@
+<template>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 50 50"
+  :class="{ 'svg-white' : white, 'svg-absolute' : top || left }"
+  :style="{ top: top + '%', left: left + '%', width: width + 'px' }"
+>
+<g>
+  <defs>
+    <rect id="SVGID_1_" x="1.2" y="0" width="47.6" height="50"/>
+  </defs>
+  <clipPath id="SVGID_2_">
+    <use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+  </clipPath>
+  <line class="st0" x1="14" y1="40.1" x2="15.9" y2="42.1"/>
+  <line class="st0" x1="7.4" y1="33.5" x2="10.9" y2="37"/>
+  <line class="st0" x1="13.4" y1="33.9" x2="26.8" y2="47.3"/>
+  <line class="st0" x1="6.6" y1="27.1" x2="9.3" y2="29.8"/>
+  <g class="st1">
+    <defs>
+      <rect id="SVGID_3_" x="1.2" y="0" width="47.6" height="50"/>
+    </defs>
+    <clipPath id="SVGID_4_">
+      <use xlink:href="#SVGID_3_" style="overflow:visible;"/>
+    </clipPath>
+    <line class="st2" x1="23" y1="37.9" x2="34.8" y2="49.7"/>
+  </g>
+  <line class="st3" x1="5.2" y1="20.1" x2="17.8" y2="32.7"/>
+  <line class="st0" x1="15.1" y1="24.4" x2="35.9" y2="45.2"/>
+  <line class="st0" x1="6.5" y1="15.8" x2="10.9" y2="20.2"/>
+  <line class="st0" x1="32.3" y1="36" x2="37.3" y2="41"/>
+  <g class="st1">
+    <defs>
+      <rect id="SVGID_5_" x="1.2" y="0" width="47.6" height="50"/>
+    </defs>
+    <clipPath id="SVGID_6_">
+      <use xlink:href="#SVGID_5_"  style="overflow:visible;"/>
+    </clipPath>
+    <line class="st4" x1="1.5" y1="5.2" x2="27" y2="30.7"/>
+  </g>
+  <line class="st3" x1="22" y1="20.1" x2="46.9" y2="45"/>
+  <line class="st3" x1="11" y1="9" x2="16.7" y2="14.8"/>
+  <line class="st0" x1="26.8" y1="19.3" x2="42.9" y2="35.4"/>
+  <line class="st0" x1="10.4" y1="2.9" x2="22.3" y2="14.8"/>
+  <g class="st1">
+    <defs>
+      <rect id="SVGID_7_" x="1.2" y="0" width="47.6" height="50"/>
+    </defs>
+    <clipPath id="SVGID_8_">
+      <use xlink:href="#SVGID_7_"  style="overflow:visible;"/>
+    </clipPath>
+    <line class="st5" x1="40.1" y1="27" x2="48.5" y2="35.4"/>
+  </g>
+  <line class="st3" x1="17.6" y1="4.5" x2="34" y2="20.9"/>
+  <line class="st0" x1="31.9" y1="13.2" x2="43.3" y2="24.6"/>
+  <g class="st1">
+    <defs>
+      <rect id="SVGID_9_" x="1.2" y="0" width="47.6" height="50"/>
+    </defs>
+    <clipPath id="SVGID_10_">
+      <use xlink:href="#SVGID_9_"  style="overflow:visible;"/>
+    </clipPath>
+    <line class="st6" x1="19" y1="0.3" x2="27.5" y2="8.8"/>
+  </g>
+  <line class="st3" x1="42" y1="17.7" x2="46.5" y2="22.1"/>
+  <line class="st3" x1="25.8" y1="1.5" x2="37" y2="12.7"/>
+  <line class="st0" x1="39.7" y1="9.8" x2="42.5" y2="12.5"/>
+  <line class="st0" x1="35" y1="5.1" x2="36.9" y2="6.9"/>
+</g>
+</svg>
+
+</template>
+
+<script>
+export default {
+  props: {
+    white: {
+      type: Boolean,
+      required: false,
+    },
+    top: {
+      type: Number,
+      required: false,
+    },
+    left: {
+      type: Number,
+      required: false,
+    },
+    width: {
+      type: Number,
+      required: false,
+    },
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+  @use '../../style/colors';
+
+  .svg {
+    &-white {
+      .st0, .st1, .st2, .st3, .st4, .st5, .st6 {
+        stroke: colors.$c-white !important;
+      }
+    }
+
+    &-absolute {
+      position: absolute;
+    }
+  }
+
+  .st0, .st2, .st3, .st4, .st5, .st6 {
+    fill: none;
+    stroke-width: 0.55;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+  }
+  .st0, .st4, .st6 {
+    stroke: colors.$c-black;
+  }
+  .st2, .st3, .st5 {
+    stroke: colors.$c-gold;
+  }
+  .st0 {
+    clip-path: url(#SVGID_2_);
+  }
+  .st1 {
+    clip-path: url(#SVGID_2_);
+  }
+  .st2 {
+    clip-path: url(#SVGID_4_);
+  }
+  .st3 {
+    clip-path:url(#SVGID_2_);
+  }
+  .st4 {
+    clip-path:url(#SVGID_6_);
+  }
+  .st5 {
+    clip-path:url(#SVGID_8_);
+  }
+  .st6 {
+    clip-path:url(#SVGID_10_);
+  }
+</style>

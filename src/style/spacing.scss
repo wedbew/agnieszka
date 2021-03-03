@@ -1,0 +1,238 @@
+$small: 4px;
+$medium: 8px;
+$large: 16px;
+$x-large: 32px;
+
+@mixin margin-small {
+  &-t {
+    margin-top: $small;
+  }
+  &-b {
+    margin-bottom: $small;
+  }
+  &-l {
+    margin-left: $small;
+  }
+  &-r {
+    margin-right: $small;
+  }
+  &-lr {
+    margin-left: $small;
+    margin-right: $small;
+  }
+  &-tb {
+    margin-top: $small;
+    margin-bottom: $small;
+  }
+}
+
+@mixin margin-medium {
+  &-t {
+    margin-top: $medium;
+  }
+  &-b {
+    margin-bottom: $medium;
+  }
+  &-l {
+    margin-left: $medium;
+  }
+  &-r {
+    margin-right: $medium;
+  }
+  &-lr {
+    margin-left: $medium;
+    margin-right: $medium;
+  }
+  &-tb {
+    margin-top: $medium;
+    margin-bottom: $medium;
+  }
+}
+
+@mixin margin-large {
+  &-t {
+    margin-top: $large;
+  }
+  &-b {
+    margin-bottom: $large;
+  }
+  &-l {
+    margin-left: $large;
+  }
+  &-r {
+    margin-right: $large;
+  }
+  &-lr {
+    margin-left: $large;
+    margin-right: $large;
+  }
+  &-tb {
+    margin-top: $large;
+    margin-bottom: $large;
+  }
+}
+
+@mixin margin-x-large {
+  &-t {
+    margin-top: $x-large;
+  }
+  &-b {
+    margin-bottom: $x-large;
+  }
+  &-l {
+    margin-left: $x-large;
+  }
+  &-r {
+    margin-right: $x-large;
+  }
+  &-lr {
+    margin-left: $x-large;
+    margin-right: $x-large;
+  }
+  &-tb {
+    margin-top: $x-large;
+    margin-bottom: $x-large;
+  }
+}
+
+@mixin margin {
+  &-s {
+    @include margin-small();
+  }
+  &-m {
+    @include margin-medium();
+  }
+  &-l {
+    @include margin-large();
+  }
+  &-xl {
+    @include margin-x-large();
+  }
+}
+
+.m {
+  @include margin();
+}
+
+@mixin padding-small {
+  &-t {
+    padding-top: $small;
+  }
+  &-b {
+    padding-bottom: $small;
+  }
+  &-l {
+    padding-left: $small;
+  }
+  &-r {
+    padding-right: $small;
+  }
+  &-lr {
+    padding-left: $small;
+    padding-right: $small;
+  }
+  &-tb {
+    padding-top: $small;
+    padding-bottom: $small;
+  }
+  &-all {
+    padding: $small;
+  }
+}
+
+@mixin padding-medium {
+  &-t {
+    padding-top: $medium;
+  }
+  &-b {
+    padding-bottom: $medium;
+  }
+  &-l {
+    padding-left: $medium;
+  }
+  &-r {
+    padding-right: $medium;
+  }
+  &-lr {
+    padding-left: $medium;
+    padding-right: $medium;
+  }
+  &-tb {
+    padding-top: $medium;
+    padding-bottom: $medium;
+  }
+  &-all {
+    padding: $medium;
+  }
+}
+
+@mixin padding-large {
+  &-t {
+    padding-top: $large;
+  }
+  &-b {
+    padding-bottom: $large;
+  }
+  &-l {
+    padding-left: $large;
+  }
+  &-r {
+    padding-right: $large;
+  }
+  &-lr {
+    padding-left: $large;
+    padding-right: $large;
+  }
+  &-tb {
+    padding-top: $large;
+    padding-bottom: $large;
+  }
+  &-all {
+    padding: $large;
+  }
+}
+
+@mixin padding-x-large {
+  &-t {
+    padding-top: $x-large;
+  }
+  &-b {
+    padding-bottom: $x-large;
+  }
+  &-l {
+    padding-left: $x-large;
+  }
+  &-r {
+    padding-right: $x-large;
+  }
+  &-lr {
+    padding-left: $x-large;
+    padding-right: $x-large;
+  }
+  &-tb {
+    padding-top: $x-large;
+    padding-bottom: $x-large;
+  }
+  &-all {
+    padding: $x-large;
+  }
+}
+
+@mixin padding {
+  &-s {
+    @include padding-small();
+  }
+  &-m {
+    @include padding-medium();
+  }
+  &-l {
+    @include padding-large();
+  }
+  &-xl {
+    @include padding-x-large();
+  }
+}
+
+.p {
+  @include padding();
+}

@@ -54,12 +54,12 @@ export default {
       return this.$store.state.currentTab;
     },
   },
-  watch: {
-    currentTab(newVal) {
-      this.activeTab = newVal;
-      this.setActiveTab();
-    },
-  },
+  // watch: {
+  //   currentTab(newVal) {
+  //     this.activeTab = newVal;
+  //     this.setActiveTab();
+  //   },
+  // },
   methods: {
     setActiveTab() {
       const activeTab = this.menuItems.filter((item) => item.en === this.activeTab);

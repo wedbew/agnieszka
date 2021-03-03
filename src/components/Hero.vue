@@ -12,10 +12,30 @@
       type="video/mp4"
     >
     </video>
-    <div class="hero-content" data-aos="fade-in" data-aos-delay="500">
-      <h2 class="hero-heading">I'm Agnieszka</h2>
-      <p id="typewriter" class="hero-text"></p>
-      <Button>Hello</Button>
+    <div class="hero-content">
+      <h2
+        class="hero-heading"
+        data-aos="fade-right"
+        data-aos-delay="1000"
+        data-aos-duration="500"
+      >
+        I'm Agnieszka
+      </h2>
+      <p
+        id="typewriter"
+        class="hero-text"
+        data-aos="fade-right"
+        data-aos-delay="1100"
+        data-aos-duration="500"
+      >
+      </p>
+      <div
+        data-aos="fade-right"
+        data-aos-delay="1200"
+        data-aos-duration="500"
+      >
+        <Button>Hello</Button>
+      </div>
     </div>
     <!-- <div class="hero-wrapper"> -->
       <!-- <img class="hero-bg" src="../assets/shape.svg"> -->

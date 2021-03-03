@@ -1,11 +1,27 @@
 <template>
-  <div class="heading">
-    <h2 class="heading-title">{{ title }}</h2>
-    <p class="heading-paragraph">{{ paragraph }}</p>
+  <div
+    class="heading"
+    :style="{ minHeight: minHeight + 'px' }"
+  >
+    <slot name="top" />
+    <h2
+      class="heading-title"
+      :class="{ 'heading-title-white' :white }"
+    >
+      {{ title }}
+    </h2>
+    <p
+      class="heading-paragraph"
+      :class="{ 'heading-paragraph-white' :white }"
+    >
+      {{ paragraph }}
+    </p>
+    <slot name="bottom" />
   </div>
 </template>
 
 <script>
+
 export default {
   props: {
     title: {
@@ -16,12 +32,21 @@ export default {
       type: String,
       required: false,
     },
+    minHeight: {
+      type: Number,
+      required: false,
+    },
+    white: {
+      type: Boolean,
+      required: false,
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
   @use '../style/colors';
+  @use '../style/typography';
 
   .heading {
     width: 100%;
@@ -29,15 +54,23 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
+    &-image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      opacity: 0.15;
+      z-index: 0;
+    }
     &-title {
-      font-size: 3rem;
-      font-weight: 700;
-      color: colors.$c-black;
-      letter-spacing: 0.05rem;
       text-align: center;
       margin-bottom: 50px;
       position: relative;
       max-width: 750px;
+      @include typography.h2();
       &::after {
         position: absolute;
         content: '';
@@ -49,13 +82,17 @@ export default {
         right: 0;
         margin: 0 auto;
       }
+      &-white {
+        color: colors.$c-white;
+        &::after {
+          background-color: colors.$c-white;
+        }
+      }
     }
     &-paragraph {
-      color: colors.$c-grey-dark;
-      line-height: 1.8rem;
       text-align: center;
-      font-size: 1.25rem;
       max-width: 750px;
+      @include typography.paragraph();
     }
   }
 </style>

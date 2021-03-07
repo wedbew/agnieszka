@@ -3,8 +3,8 @@
     <Navigation />
     <Hero />
     <About />
-    <Contact />
     <Experience />
+    <Contact />
     <CallToAction />
     <Footer />
   </div>

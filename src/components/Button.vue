@@ -1,5 +1,9 @@
 <template>
-  <button :class="{ 'btn-secondary' : secondary, 'btn-tertiary' : tertiary }" class="btn">
+  <button
+    :class="{ 'btn-secondary' : secondary, 'btn-tertiary' : tertiary }"
+    class="btn"
+    @click="$emit('btnIndex', index ? index : 'hello')"
+  >
     <slot/>
   </button>
 </template>
@@ -13,6 +17,17 @@ export default {
     tertiary: {
       type: Boolean,
       default: false,
+    },
+    index: {
+      type: Number,
+      required: false,
+    },
+  },
+  methods: {
+    clicked() {
+      if (this.index) {
+        this.$emit('btnIndex', this.index);
+      }
     },
   },
 };

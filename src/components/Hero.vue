@@ -1,12 +1,9 @@
 <template>
   <main
+    id="home"
     class="hero"
-    v-observe-visibility="{
-      callback: visibilityChanged,
-    }"
   >
-    <img class="hero-video" v-if="!isLoaded" src="../assets/Loading.png" />
-    <video v-show="isLoaded" autoplay muted loop class="hero-video">
+    <video muted loop id="video" class="hero-video">
       <source
       src="../assets/Typewriter.mp4"
       type="video/mp4"
@@ -64,6 +61,7 @@ export default {
     }, 3000);
   },
   mounted() {
+    this.isVedoLoaded();
     this.type();
   },
   methods: {
@@ -84,6 +82,14 @@ export default {
         autoStart: true,
       });
     },
+    isVedoLoaded() {
+      const video = document.querySelector('#video');
+      video.addEventListener('loadeddata', () => {
+        if (video.readyState === 4) {
+          video.play();
+        }
+      });
+    },
   },
 };
 </script>
@@ -92,7 +98,7 @@ export default {
   .hero {
     background-color: colors.$c-grey;
     max-width: 100%;
-    height: calc(100vh - 48px);
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -136,9 +142,6 @@ export default {
       font-size: 2rem;
       display: block;
       margin-bottom: 30px;
-      * {
-        background-color: colors.$c-white !important;
-      }
     }
     &-image {
       height: 700px;

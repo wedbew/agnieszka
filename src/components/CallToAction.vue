@@ -43,7 +43,14 @@
           :left="70"
         />
       </div>
-      <Button slot="bottom" tertiary>Hire Me</Button>
+      <div
+        slot="bottom"
+        data-aos="fade-up"
+        data-aos-delay="300"
+        data-aos-duration="1000"
+      >
+        <Button tertiary>Hire Me</Button>
+      </div>
     </Heading>
   </section>
 </template>

@@ -7,12 +7,18 @@
     <h2
       class="heading-title"
       :class="{ 'heading-title-white' :white }"
+      data-aos="fade-up"
+      data-aos-delay="100"
+      data-aos-duration="1000"
     >
       {{ title }}
     </h2>
     <p
       class="heading-paragraph"
       :class="{ 'heading-paragraph-white' :white }"
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-duration="1000"
     >
       {{ paragraph }}
     </p>

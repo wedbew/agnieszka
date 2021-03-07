@@ -1,17 +1,11 @@
 <template>
   <div
+    id="about"
     class="about p-xl-tb"
-    v-observe-visibility="{
-      callback: visibilityChanged,
-      threshold: 1,
-    }"
   >
     <div class="about-wrapper">
       <div
         class="about-title"
-        data-aos="fade-up"
-        data-aos-delay="400"
-        data-aos-duration="1000"
       >
         <Heading
           title="About"
@@ -23,7 +17,7 @@
       <div
         class="about-content"
         data-aos="fade-up"
-        data-aos-delay="600"
+        data-aos-delay="200"
         data-aos-duration="1000"
       >
         <p class="t-p m-xl-b">

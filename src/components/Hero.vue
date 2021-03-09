@@ -102,7 +102,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 0 200px;
+    padding-left: 200px;
     position: relative;
     &-video {
       position: absolute;
@@ -115,7 +115,6 @@ export default {
     }
     &-content {
       height: 300px;
-      width: 50%;
       z-index: 2;
     }
     &-wrapper {

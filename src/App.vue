@@ -1,15 +1,27 @@
 <template>
   <div id="app">
-    <Home />
+    <Home v-if="isLoaded" />
     <!-- <router-view/> -->
   </div>
 </template>
 <script>
 import Home from './views/Home.vue';
+import Loader from './components/Loader.vue';
 
 export default {
   components: {
     Home,
+    Loader,
+  },
+  data() {
+    return {
+      isLoaded: false,
+    };
+  },
+  mounted() {
+    window.addEventListener('load', () => {
+      this.isLoaded = true;
+    });
   },
 };
 </script>

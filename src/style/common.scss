@@ -1,4 +1,5 @@
 @use './colors.scss';
+@use './fonts.css';
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -37,6 +38,13 @@ body {
     width: 100%;
     height: 2px;
     background-color: colors.$c-gold;
+  }
+
+  &-black {
+    color: colors.$c-black;
+    &::after {
+      background-color: colors.$c-black;
+    }
   }
 
   &-white {

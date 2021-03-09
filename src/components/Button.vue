@@ -1,6 +1,15 @@
 <template>
+  <a
+    v-if="link"
+    :class="{ 'btn-secondary' : secondary, 'btn-tertiary' : tertiary, 'btn-black' : black }"
+    class="btn"
+    :href="link"
+  >
+    <slot/>
+  </a>
   <button
-    :class="{ 'btn-secondary' : secondary, 'btn-tertiary' : tertiary }"
+    v-else
+    :class="{ 'btn-secondary' : secondary, 'btn-tertiary' : tertiary, 'btn-black' : black }"
     class="btn"
     @click="$emit('btnIndex', index ? index : 'hello')"
   >
@@ -13,10 +22,21 @@ export default {
     secondary: {
       type: Boolean,
       default: false,
+      required: false,
     },
     tertiary: {
       type: Boolean,
       default: false,
+      required: false,
+    },
+    black: {
+      type: Boolean,
+      default: false,
+      required: false,
+    },
+    link: {
+      type: String,
+      default: '',
     },
     index: {
       type: Number,
@@ -44,6 +64,7 @@ export default {
     color: colors.$c-white;
     transition: background-color 250ms ease-in-out;
     z-index: 1;
+    text-decoration: none;
     &:hover {
       color: colors.$c-gold;
       background-color: transparent;
@@ -68,6 +89,19 @@ export default {
       &:hover {
         color: colors.$c-white !important;
         background-color: colors.$c-black !important;
+      }
+    }
+
+    &-black {
+      color: colors.$c-black;
+      background-color: colors.$c-white;
+      border: 2px solid colors.$c-black;
+      border-radius: 0;
+
+      &:hover {
+        color: colors.$c-white !important;
+        background-color: colors.$c-black !important;
+        border: 2px solid colors.$c-black;
       }
     }
 

@@ -12,7 +12,7 @@
         @btnIndex="setModalContent($event)"
         :index="item.index"
         class="m-xl-t"
-        tertiary
+        black
       >
         Reference
       </Button>

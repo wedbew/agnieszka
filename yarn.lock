@@ -859,6 +859,24 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
+"@carbon/grid@^10.23.0":
+  version "10.23.0"
+  resolved "https://registry.yarnpkg.com/@carbon/grid/-/grid-10.23.0.tgz#4001b6868639cb5d1358199145edae4faeda4a67"
+  integrity sha512-vgNEgk0MvVnulShmx1jyc+u83yq///hcrboZssENC8VDTCKC0q3iLl5MQoYael5siji3k9fpUL+IBvdTB8BSkg==
+  dependencies:
+    "@carbon/import-once" "^10.6.0"
+    "@carbon/layout" "^10.21.0"
+
+"@carbon/import-once@^10.6.0":
+  version "10.6.0"
+  resolved "https://registry.yarnpkg.com/@carbon/import-once/-/import-once-10.6.0.tgz#a8fb846d9dc3eea9d45d9131a235e898d0f8db1e"
+  integrity sha512-vi0lnmZot9J5uW2p9chtyLBwe3nCTY4HrDWuglLOZVOHu7dbLQiRjD/r3uOjB4lr5qduRwk2hblBXKBhpVDBpg==
+
+"@carbon/layout@^10.21.0":
+  version "10.21.0"
+  resolved "https://registry.yarnpkg.com/@carbon/layout/-/layout-10.21.0.tgz#752554bf5f8ad1818dde25c0c84471cbdf890f06"
+  integrity sha512-fxmDEHKbh2jKP0oPRzwEZ/dYuW/QGy0zzLD77j5bbz/mm7WjvZEBiunxIeBXlvV5Tv2YwAVcH8npcUuHmNWnGA==
+
 "@hapi/address@2.x.x":
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/@hapi/address/-/address-2.1.4.tgz#5d67ed43f3fd41a69d4b9ff7b56e7c0d1d0a81e5"

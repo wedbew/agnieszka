@@ -3,12 +3,12 @@
     id="home"
     class="hero"
   >
-    <video muted loop id="video" class="hero-video">
+    <!-- <video muted loop id="video" class="hero-video">
       <source
       src="../assets/Typewriter.mp4"
       type="video/mp4"
     >
-    </video>
+    </video> -->
     <div class="hero-content">
       <h2
         class="hero-heading"
@@ -16,7 +16,7 @@
         data-aos-delay="1000"
         data-aos-duration="500"
       >
-        I'm Agnieszka
+        Jestem Agnieszka
       </h2>
       <p
         id="typewriter"
@@ -31,7 +31,7 @@
         data-aos-delay="1200"
         data-aos-duration="500"
       >
-        <Button>Hello</Button>
+        <Button black>Skontaktuj się ze mną</Button>
       </div>
     </div>
     <!-- <div class="hero-wrapper"> -->
@@ -61,7 +61,7 @@ export default {
     }, 3000);
   },
   mounted() {
-    this.isVedoLoaded();
+    // this.isVedoLoaded();
     this.type();
   },
   methods: {
@@ -76,7 +76,7 @@ export default {
     },
     type() {
       this.typewriter = new Typewriter('#typewriter', {
-        strings: ['Hello', 'World'],
+        strings: ['Współpracujmy razem', 'Albo nie, wypchaj się'],
         pauseFor: 1000,
         loop: true,
         autoStart: true,
@@ -96,7 +96,7 @@ export default {
 <style lang="scss" scoped>
   @use '../style/colors';
   .hero {
-    background-color: colors.$c-grey;
+    background-color: colors.$c-white;
     max-width: 100%;
     height: 100vh;
     display: flex;
@@ -131,13 +131,13 @@ export default {
       opacity: 0.6;
     }
     &-heading {
-      color: colors.$c-white;
+      color: colors.$c-black;
       font-size: 5rem;
       font-weight: 700;
       margin-bottom: 30px;
     }
     &-text {
-      color: colors.$c-white;
+      color: colors.$c-black;
       font-size: 2rem;
       display: block;
       margin-bottom: 30px;

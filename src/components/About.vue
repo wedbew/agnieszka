@@ -5,19 +5,21 @@
   >
     <div class="about-wrapper">
       <div
-        class="about-title"
+        class="about-card"
       >
-        <Heading
-          title="About"
-          :min-height="350"
+        <img
+          class="about-image"
+          src="../assets/Agnieszka.png"
+          alt="Ja"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="1000"
         >
-          <Lines slot="top" class="heading-image" />
-        </Heading>
       </div>
       <div
         class="about-content"
         data-aos="fade-up"
-        data-aos-delay="200"
+        data-aos-delay="300"
         data-aos-duration="1000"
       >
         <p class="t-p m-xl-b">
@@ -82,8 +84,18 @@ export default {
       align-items: center;
       justify-content: center;
     }
-    &-title, &-content {
+    &-image {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 100%;
+    }
+    &-card, &-content {
       width: 50%;
+    }
+    &-card {
+      display: flex;
+      justify-content: center;
     }
     &-content {
       .t-p {

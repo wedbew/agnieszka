@@ -40,6 +40,14 @@
 
 
 @mixin typography {
+  &-w {
+    &-t {
+      font-weight: 100;
+    }
+    &-b {
+      font-weight: 600;
+    }
+  }
   &-h {
     &-1 {
       @include h1();

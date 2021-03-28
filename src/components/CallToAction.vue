@@ -1,6 +1,6 @@
 <template>
   <section class="cta p-xl-tb">
-    <Heading
+    <!-- <Heading
       title="Have Any Project In Mind?"
       white
       :min-height="300"
@@ -51,11 +51,13 @@
       >
         <Button tertiary>Hire Me</Button>
       </div>
-    </Heading>
+    </Heading> -->
+    <Banner class="cta-scene" />
   </section>
 </template>
 
 <script>
+import Banner from './Banner';
 import Parallax from 'parallax-js';
 import Button from './Button.vue';
 import Heading from './Heading.vue';
@@ -67,6 +69,7 @@ import Triangle from './Shapes/Triangle.vue';
 
 export default {
   components: {
+    Banner,
     Heading,
     Button,
     Circles,
@@ -103,12 +106,17 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: colors.$c-gold;
-    background-image: linear-gradient(315deg, colors.$c-gold 0%, colors.$c-gold-light 74%);
+    background-color: colors.$c-white;
+    // background-image: linear-gradient(315deg, colors.$c-gold 0%, colors.$c-gold-light 74%);
 
     &-scene {
       width: 100%;
       height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center
+      ;
     }
   }
 </style>

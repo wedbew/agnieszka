@@ -111,8 +111,8 @@ export default {
         cursor: pointer;
         // background-color: unset;
         background-image: linear-gradient(-45deg, colors.$c-gold-pale, colors.$c-gold-dark, colors.$c-gold-light, colors.$c-gold);
-        background-size: 400% 400%;
-        animation: gradient 3s ease-in-out infinite;
+        background-size: 200% 200%;
+        // animation: gradient 3s ease-in-out infinite;
 
         .contact-icon-wrapper {
           transform: rotate(10deg);

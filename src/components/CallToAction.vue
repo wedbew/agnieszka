@@ -58,25 +58,25 @@
 
 <script>
 import Banner from './Banner';
-import Parallax from 'parallax-js';
+// import Parallax from 'parallax-js';
 import Button from './Button.vue';
 import Heading from './Heading.vue';
-import Circles from './Shapes/Circles.vue';
-import Cross from './Shapes/Cross.vue';
-import Dots from './Shapes/Dots.vue';
-import Lines from './Shapes/Lines.vue';
-import Triangle from './Shapes/Triangle.vue';
+// import Circles from './Shapes/Circles.vue';
+// import Cross from './Shapes/Cross.vue';
+// import Dots from './Shapes/Dots.vue';
+// import Lines from './Shapes/Lines.vue';
+// import Triangle from './Shapes/Triangle.vue';
 
 export default {
   components: {
     Banner,
     Heading,
     Button,
-    Circles,
-    Cross,
-    Dots,
-    Lines,
-    Triangle,
+    // Circles,
+    // Cross,
+    // Dots,
+    // Lines,
+    // Triangle,
   },
   data() {
     return {

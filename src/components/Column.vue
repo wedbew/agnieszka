@@ -17,7 +17,7 @@ const breakpointProp = {
   },
 };
 export default {
-  name: 'CvColumn',
+  name: 'Column',
   props: {
     sm: breakpointProp,
     md: breakpointProp,

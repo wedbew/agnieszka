@@ -31,7 +31,7 @@
         data-aos-delay="1200"
         data-aos-duration="500"
       >
-        <Button black>Skontaktuj się ze mną</Button>
+        <!-- <Button black>Skontaktuj się ze mną</Button> -->
       </div>
     </div>
     <!-- <div class="hero-wrapper"> -->
@@ -76,7 +76,7 @@ export default {
     },
     type() {
       this.typewriter = new Typewriter('#typewriter', {
-        strings: ['Współpracujmy razem', 'Albo nie, wypchaj się'],
+        strings: ['Lorem ipsum', 'Hello world'],
         pauseFor: 1000,
         loop: true,
         autoStart: true,

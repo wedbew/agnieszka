@@ -14,10 +14,8 @@
 </template>
 
 <script>
-import carbonPrefixMixin from '../../mixins/carbon-prefix-mixin';
 export default {
-  name: 'CvRow',
-  mixins: [carbonPrefixMixin],
+  name: 'Row',
   props: {
     kind: {
       type: String,

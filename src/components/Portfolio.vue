@@ -1,6 +1,6 @@
 <template>
-  <div class="container m-xl-tb">
-    <h2 class="t-h-2 m-l-b">Articles categories</h2>
+  <div>
+    <!-- <h2 class="t-h-2 m-l-b">Articles categories</h2>
     <div class="articles-filters m-xl-b">
       <Button
         v-for="(item, index) in categories"
@@ -12,43 +12,78 @@
       >
         {{ item.label }}
       </Button>
-    </div>
-    <div class="articles">
-      <article
-        v-for="(article, index) in filter"
-        :key="index + article"
-        class="articles-item p-xl-all"
-        @mouseenter="article.active = true"
-        @mouseleave="article.active = false"
-      >
-        <Tag :active="article.active">{{ article.category }}</Tag>
-        <div class="articles-item-content" :data-category="article.category">
-          <h3 class="t-h-3 p-xl-b">{{ article.title }}</h3>
-          <p
-            class="t-p p-l-b"
-            v-if="!article.active"
-          >
-            {{ article.paragraph }}
-          </p>
+    </div> -->
+    <Grid class="m-xl-tb">
+      <Row>
+        <h2 class="t-h-2 m-l-b">Articles categories</h2>
+        <div class="articles-filters m-xl-b">
           <Button
-            v-if="article.active"
-            class="m-xl-b"
+            v-for="(item, index) in categories"
+            :key="index"
             black
-            :link="article.link"
+            class="m-l-r"
+            :active="item.active"
+            @click.native="changeCategory(item.label, item.active)"
           >
-            Read more
+            {{ item.label }}
           </Button>
         </div>
-      </article>
-    </div>
+      </Row>
+      <Row class="articles">
+        <Column
+          v-for="(article, index) in filter"
+          :key="index + article"
+          :lg="5"
+          :md="8"
+          :sm="16"
+          style="padding: unset; margin-bottom: 2rem;"
+        >
+          <article
+            class="articles-item p-xl-all"
+            @mouseenter="article.active = true"
+            @mouseleave="article.active = false"
+          >
+            <div class="articles-item-meta">
+              <h6 class="t-h-6 p-m-b">{{ article.date }}</h6>
+              <Tag :active="article.active">{{ article.category }}</Tag>
+            </div>
+            <div class="articles-item-content" :data-category="article.category">
+              <h3 class="t-h-3 m-xl-b">{{ article.title }}</h3>
+              <div class="article-paragraph">
+                <p
+                  class="t-p m-xl-b"
+                  v-if="!article.active"
+                >
+                  {{ article.paragraph }}
+                </p>
+              </div>
+              <Button
+                v-if="article.active"
+                class="m-xl-b"
+                black
+                :link="article.link"
+              >
+                Read more
+              </Button>
+            </div>
+          </article>
+        </Column>
+      </Row>
+    </Grid>
   </div>
 </template>
 
 <script>
 import Button from './Button';
+import Grid from './Grid';
+import Column from './Column';
+import Row from './Row';
 import Tag from './Tag';
 export default {
   components: {
+    Grid,
+    Row,
+    Column,
     Button,
     Tag,
   },
@@ -201,19 +236,31 @@ export default {
   @use '../style/typography';
 
   .articles {
-    width: 100%;
-    min-height: 60vh;
-    display: grid;
-    grid-template-columns: repeat(3, 33.3%);
-    grid-gap: 20px;
+    justify-content: space-between;
     &-filters {
       display:flex;
       width: 100%;
     }
+    &-paragraph {
+      width: 100%;
+      height: 50px;
+    }
     &-item {
-      height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 300px;
+      width: 400px;
       border: 2px solid colors.$c-black;
       background-color: colors.$c-white;
+
+      @media (max-width: 1650px) {
+        width: 350px;
+      }
+
+      @media (max-width: 1024px) {
+        width: 250px;
+      }
 
       &:hover {
         background-color: colors.$c-black;
@@ -221,6 +268,7 @@ export default {
 
         .t-h-3,
         .t-h-5,
+        .t-h-6,
         .t-p {
           color: colors.$c-white;
         }
@@ -233,8 +281,22 @@ export default {
         align-items: flex-start;
         justify-content: flex-end;
 
+        .btn {
+          &:hover {
+            border: 2px solid colors.$c-white;
+          }
+        }
+
         .t-h-5 {
           text-transform: uppercase;
+        }
+
+        .t-p {
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
 
       }

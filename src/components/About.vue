@@ -34,8 +34,7 @@
           Voluptas eveniet vitae sed delectus autem eum nesciunt quibusdam
           quasi corrupti aliquam. Porro, ex.
         </p>
-        <Button class="m-xl-t m-xl-r">Hello</Button>
-        <Button secondary>World</Button>
+        <Button black class="m-xl-t m-xl-r">Hello</Button>
       </div>
     </div>
   </div>
@@ -43,13 +42,13 @@
 <script>
 import Heading from './Heading.vue';
 import Button from './Button.vue';
-import Lines from './Shapes/Lines.vue';
+// import Lines from './Shapes/Lines.vue';
 
 export default {
   components: {
     Heading,
     Button,
-    Lines,
+    // Lines,
   },
   data() {
     return {
@@ -98,9 +97,9 @@ export default {
       justify-content: center;
     }
     &-content {
-      .t-p {
-        color: colors.$c-grey-light;
-      }
+      // .t-p {
+      //   color: colors.$c-grey-light;
+      // }
     }
   }
 </style>

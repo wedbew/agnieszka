@@ -59,7 +59,7 @@ export default {
 <style lang="scss" scoped>
   @use '../style/colors';
   .btn {
-    background-color: colors.$c-gold;
+    background-color: colors.$c-white;
     border: 2px solid colors.$c-gold;
     border-radius: 3px;
     padding: 15px 40px;

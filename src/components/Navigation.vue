@@ -1,22 +1,24 @@
 <template>
-  <scrollactive class="navbar" active-class="navbar-link-active">
-    <div class="navbar-header">
-        <!-- <a href="/" class="navbar-link">A<span>T</span>.</a> -->
-    </div>
-    <ul class="navbar-menu">
-      <li
-        v-for="(item, index) in menuItems"
-        :key="index"
-        class="navbar-menu-item"
-      >
-        <a
-          :href="'#' + item.en.toLowerCase()"
-          class="navbar-link scrollactive-item">
-          {{ item.en }}
-        </a>
-      </li>
-    </ul>
-  </scrollactive>
+  <div class="container">
+    <scrollactive class="navbar" active-class="navbar-link-active">
+      <div class="navbar-header">
+          <!-- <a href="/" class="navbar-link">A<span>T</span>.</a> -->
+      </div>
+      <ul class="navbar-menu">
+        <li
+          v-for="(item, index) in menuItems"
+          :key="index"
+          class="navbar-menu-item"
+        >
+          <a
+            :href="'#' + item.en.toLowerCase()"
+            class="navbar-link scrollactive-item">
+            {{ item.en }}
+          </a>
+        </li>
+      </ul>
+    </scrollactive>
+  </div>
 </template>
 <script>
 export default {
